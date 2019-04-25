@@ -9,12 +9,25 @@ npm config set @sap:registry https://npm.sap.com
 npm install
 ```
 
-## Usage (Dev Mode, Windows)
+## Environment Config
+
+### (Windows)
 ```(bash)
 set HANA_USER=SYSTEM
 set HANA_PW=HXEHana1
 set HANA_SERVER=hxehost
 set HANA_PORT=39017
+```
+
+### (Mac/Linux)
+```(bash)
+export HANA_USER=SYSTEM
+export HANA_PW=HXEHana1
+export HANA_SERVER=hxehost
+export HANA_PORT=39017
+```
+## Run
+```
 npm run dev
 ```
 
