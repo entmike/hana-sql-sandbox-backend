@@ -4,7 +4,7 @@ const cors = require('cors');
 const hana = require('@sap/hana-client');
 const bodyParser = require('body-parser');
 
-var conn = hana.createConnection();
+let conn = hana.createConnection();
 router.use(bodyParser.json());
 
 router.use(bodyParser.urlencoded({extended:true}));
@@ -12,19 +12,6 @@ router.use(bodyParser.urlencoded({extended:true}));
 router.options('*',cors());
 
 router.post('/',cors(),(req,res)=>{
-    console.log(req.body);
-    if(!process.env.HANA_SERVER || !process.env.HANA_PORT) {
-        res.status(500);
-        res.end("Set your server and port in your environment, dummy.");
-        return 1;
-    }
-
-    if(!process.env.HANA_PW || !process.env.HANA_USER) {
-        res.status(500);
-        res.end("Set your username and password in your environment, dummy.");
-        return 1;
-    }
-
     var conn_params = {
         serverNode  : process.env.HANA_SERVER + ':' + process.env.HANA_PORT,
         uid         : process.env.HANA_USER,
