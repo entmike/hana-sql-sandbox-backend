@@ -5,6 +5,7 @@ Uses `@sap/hana-client` to run HANA Statements to HANA backend.  Returns JSON me
 ```(bash)
 git clone https://github.com/entmike/hana-sql-sandbox-backend.git
 cd hana-sql-sandbox-backend
+npm config set @sap:registry https://npm.sap.com
 npm install
 ```
 
