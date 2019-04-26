@@ -22,10 +22,10 @@ if(!process.env.HANA_SERVER || !process.env.HANA_PORT
     const conn = hana.createConnection();
     conn.connect(conn_params, err=>{
         if(err){
-            console.log(`An error occured while trying to connect:
-            ${err}`);
+            console.log('An error occured while trying to connect:\n\n');
+            console.log(JSON.stringify(err));
         }else{
-            console.log(`Connection test successful.  Disconnecting for now.`);
+            console.log(`Connection test successful.`);
             conn.disconnect();
             let sqlRouter = require('./api/sql');
             app.use('/api/sql', sqlRouter);
