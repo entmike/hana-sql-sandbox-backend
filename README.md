@@ -1,6 +1,11 @@
 # HANA Sandbox Backend
 Uses `@sap/hana-client` to run HANA Statements to HANA backend.  Returns JSON meant for a Vue frontend like https://github.com/entmike/hana-sql-sandbox-frontend.
 
+## Docker Installation
+Easy-mode here:
+
+https://hub.docker.com/r/entmike/hana-sql-sandbox 
+
 ## Installation
 ```(bash)
 git clone https://github.com/entmike/hana-sql-sandbox-backend.git
