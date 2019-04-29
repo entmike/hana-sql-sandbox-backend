@@ -28,7 +28,9 @@ if(!process.env.HANA_SERVER || !process.env.HANA_PORT
             console.log(`Connection test successful.`);
             conn.disconnect();
             let sqlRouter = require('./api/sql');
+            let overviewRouter = require('./api/overview');
             app.use('/api/sql', sqlRouter);
+            app.use('/api/overview', overviewRouter);
             app.use(bodyParser.json());
             app.use(bodyParser.urlencoded({
                 extended : true
