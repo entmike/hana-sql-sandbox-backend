@@ -1,14 +1,22 @@
 {
-  "name": "backend",
-  "version": "1.0.0",
-  "description": "",
+  "name": "hana-sql-sandbox-backend",
+  "version": "1.0.1",
+  "description": "Uses @sap/hana-client to run HANA Statements to HANA backend. Returns JSON meant for a Vue frontend like https://github.com/entmike/hana-sql-sandbox-frontend.",
   "main": "index.js",
   "scripts": {
+    "debug": "nodemon --inspect server.js",
     "dev": "nodemon server.js",
     "prod": "node server.js"
   },
-  "keywords": [],
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/entmike/hana-sql-sandbox-backend.git"
+  },
+  "keywords": [
+    "SAP",
+    "HANA"
+  ],
+  "author": "Mike Howles",
   "license": "ISC",
   "dependencies": {
     "@sap/hana-client": "^2.4.126",

@@ -7,8 +7,8 @@ Easy-mode here:
 https://hub.docker.com/r/entmike/hana-sql-sandbox 
 
 ## Installation
-```(bash)
-git clone https://github.com/entmike/hana-sql-sandbox-backend.git
+```bash
+npm i hana-sql-sandbox-backend
 cd hana-sql-sandbox-backend
 npm config set @sap:registry https://npm.sap.com
 npm install
@@ -17,7 +17,7 @@ npm install
 ## Environment Config
 
 ### (Windows)
-```(bash)
+```bash
 set HANA_USER=SYSTEM
 set HANA_PW=HXEHana1
 set HANA_SERVER=hxehost
@@ -25,17 +25,26 @@ set HANA_PORT=39017
 ```
 
 ### (Mac/Linux)
-```(bash)
+```bash
 export HANA_USER=SYSTEM
 export HANA_PW=HXEHana1
 export HANA_SERVER=hxehost
 export HANA_PORT=39017
 ```
 ## Run
+3 different ways to run, depending if you are tinkering/developing/etc...
+### Debug Mode
+```bash
+npm run debug
 ```
+### Development Mode
+```bash
 npm run dev
 ```
-
+### Production Mode
+```bash
+npm run prod
+```
 ### Results
 ```
 > backend@1.0.0 dev C:\code\backend
