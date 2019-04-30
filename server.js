@@ -22,6 +22,7 @@ if(!process.env.HANA_SERVER || !process.env.HANA_PORT
     const conn = hana.createConnection();
     conn.connect(conn_params, err=>{
         if(err){
+            conn.disconnect();
             console.log('An error occured while trying to connect:\n\n');
             console.log(JSON.stringify(err));
         }else{
