@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/entmike/hana-sql-sandbox-backend.svg?style=shield)](https://circleci.com/gh/entmike/hana-sql-sandbox-backend) [![npm version](https://badge.fury.io/js/hana-sql-sandbox-backend.svg)](https://badge.fury.io/js/hana-sql-sandbox-backend)
+
 # HANA Sandbox Backend
 Uses `@sap/hana-client` to run HANA Statements to HANA backend.  Returns JSON meant for a Vue frontend like https://github.com/entmike/hana-sql-sandbox-frontend.
 
